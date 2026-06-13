@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>rynexz — Home</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">rynexz</a>
+			<nav class="nav">
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="about.html">About</a>
+				<a href="contact.html" class="btn btn-outline">Contact</a>
+			</nav>
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+		</div>
+	</header>
+	<main>
+		<section class="hero hero-large">
+			<div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1519741493432-3b7f6ba4f5a8?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+			<div class="container hero-inner">
+				<div class="hero-copy">
+					<h1>Craftsmanship Meets Modern Design</h1>
+					<p class="lead">rynexz crafts watches that balance timeless aesthetics with modern precision. Explore our signature models.</p>
+					<div class="cta-group">
+						<a href="products.html" class="btn btn-primary">Browse Watches</a>
+						<a href="contact.html" class="btn btn-outline">Get in Touch</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section container">
+			<h2 class="section-title">Featured Products</h2>
+			<div class="grid products-grid featured-grid">
+				<article class="card product-card">
+					<div class="product-media" style="background-image:url('https://images.unsplash.com/photo-1519741493432-3b7f6ba4f5a8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+					<div class="card-body">
+						<h3>Model A</h3>
+						<p class="muted">Automatic — <span class="price">$899</span></p>
+						<div class="card-actions">
+							<a class="btn btn-outline" href="products.html">Details</a>
+							<a class="btn btn-primary" href="products.html">Buy</a>
+						</div>
+					</div>
+				</article>
+				<article class="card product-card">
+					<div class="product-media" style="background-image:url('https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+					<div class="card-body">
+						<h3>Model B</h3>
+						<p class="muted">Chronograph — <span class="price">$1,199</span></p>
+						<div class="card-actions">
+							<a class="btn btn-outline" href="products.html">Details</a>
+							<a class="btn btn-primary" href="products.html">Buy</a>
+						</div>
+					</div>
+				</article>
+				<article class="card product-card">
+					<div class="product-media" style="background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder')"></div>
+					<div class="card-body">
+						<h3>Model C</h3>
+						<p class="muted">Limited — <span class="price">$2,499</span></p>
+						<div class="card-actions">
+							<a class="btn btn-outline" href="products.html">Details</a>
+							<a class="btn btn-primary" href="products.html">Buy</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="about" class="section bg-light">
+			<div class="container">
+				<h2 class="section-title">About rynexz</h2>
+				<div class="grid features-grid">
+					<div class="feature">
+						<h3>Our Mission</h3>
+						<p>At rynexz we fuse traditional watchmaking with contemporary design to create timepieces that last generations.</p>
+					</div>
+					<div class="feature">
+						<h3>Craftsmanship</h3>
+						<p>Each watch is assembled by skilled technicians, inspected for precision, and finished by hand.</p>
+					</div>
+					<div class="feature">
+						<h3>Sustainability</h3>
+						<p>We responsibly source materials and offer a repair-first policy to extend the life of every piece.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="testimonials" class="section container">
+			<h2 class="section-title">What Customers Say</h2>
+			<div class="testimonials">
+				<blockquote>
+					"Exceptional build and a timeless look — I get compliments every day."
+					<cite>— R. Ahmed</cite>
+				</blockquote>
+			</div>
+		</section>
+
+		<section class="section newsletter bg-accent">
+			<div class="container newsletter-inner">
+				<h2>Stay Updated</h2>
+				<p>Sign up to receive exclusive drops and restoration offers.</p>
+				<form class="newsletter-form" action="#" method="post">
+					<input type="email" name="email" placeholder="Your email" required>
+					<button class="btn btn-primary" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">&copy; 2026 rynexz Watches</div>
+			<div class="footer-links">
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+	</footer>
+	<script>
+		const toggle = document.querySelector('.nav-toggle');
+		const nav = document.querySelector('.nav');
+		toggle && toggle.addEventListener('click', () => {
+			const isOpen = nav.classList.toggle('open');
+			toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+		});
+		document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+			if (nav.classList.contains('open')) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+		}));
+	</script>
+</body>
+</html>

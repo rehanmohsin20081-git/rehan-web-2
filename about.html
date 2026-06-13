@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>About — rynexz</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.about-page h1,
+		.about-page h2,
+		.about-page h3,
+		.about-page h4,
+		.about-page h5,
+		.about-page p,
+		.about-page .lead,
+		.about-page .section-title {
+			color:#ffffff !important;
+			opacity:1 !important;
+		}
+		.about-page .about-hero{background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.7));}
+	</style>
+	<meta name="description" content="About rynexz — our mission, craftsmanship, and sustainability in watchmaking">
+</head>
+<body class="about-page">
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="index.html">rynexz</a>
+			<nav class="nav">
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="about.html">About</a>
+				<a href="contact.html" class="btn btn-outline">Contact</a>
+			</nav>
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero about-hero" style="padding:40px 0;">
+			<div class="container hero-grid">
+				<div class="hero-content">
+					<h1>About rynexz</h1>
+					<p class="lead">rynexz crafts watches that blend classic proportions with modern engineering. Each piece is designed for daily wear, built to last, and intended to become an heirloom.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section container about-section">
+			<h2 class="section-title">Our Story</h2>
+			<p>Founded by watch enthusiasts, rynexz grew from a small atelier into a focused team of designers and watchmakers. We partner with trusted movement specialists and apply rigorous finishing and quality control at every stage.</p>
+			<p>Our earliest years were spent at a single bench, learning to balance proportion and finish. Today we retain that same attention to craft — decisions are made for longevity, clarity, and lasting beauty.</p>
+
+			<div class="grid features-grid" style="margin-top:20px;">
+				<div class="feature">
+					<h3>Hand-Finished Details</h3>
+					<p>Our dials and cases receive meticulous finishing — brushing, polish, and hand inspection to ensure lasting quality.</p>
+				</div>
+				<div class="feature">
+					<h3>Transparent Sourcing</h3>
+					<p>We prioritize suppliers with responsible practices and clearly disclose materials and origins for each model.</p>
+				</div>
+				<div class="feature">
+					<h3>Service & Repair</h3>
+					<p>Every rynexz watch is backed by long-term service options and spare parts, so your watch can be maintained for decades.</p>
+				</div>
+			</div>
+		</section>
+		<!-- Team removed per request -->
+
+		<section class="section container about-section">
+			<h2 class="section-title">Sustainability</h2>
+			<p>We focus on longevity rather than disposability. Our materials are selected for durability and repairability, and we offer a take-back program for refurbishing older models.</p>
+
+			<div style="margin-top:18px;">
+				<a class="btn btn-primary" href="products.html">See Our Collection</a>
+				<a class="btn btn-outline" href="contact.html">Contact Support</a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">&copy; 2026 rynexz Watches</div>
+		
+		</div>
+	</footer>
+
+	<script>
+		const toggle = document.querySelector('.nav-toggle');
+		const nav = document.querySelector('.nav');
+		toggle && toggle.addEventListener('click', () => {
+			const isOpen = nav.classList.toggle('open');
+			toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+		});
+		document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+			if (nav.classList.contains('open')) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+		}));
+	</script>
+</body>
+</html>
